@@ -1,0 +1,151 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{include/william}
+\usepackage{csquotes}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{William E. R.}
+\lhead{Documentation | AGV-ACR.AI}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+\begin{titlepage}
+
+\topskip0pt
+\vspace*{0pt}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\textwidth]{images/AGV.png}
+\end{figure}
+\vspace*{\fill}
+\centering 
+\Huge Documentation of Work
+\vspace{12pt}\\
+\small AGV-ACR.AI
+\vspace*{\fill}\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.15\textwidth]{images/logo.png}
+\end{figure}
+\Large William R. Ebenezaraj
+\vspace{2pt}\\
+\small \textsc{IIT Kharagpur}\\
+\href{mailto:william@iitkgp.ac.in}{william@iitkgp.ac.in}
+\vspace*{0pt}
+\end{titlepage}
+
+\newpage
+
+\tableofcontents
+
+
+
+\newpage
+
+\section{Introduction}
+This document is a summary of all work done by \textbf{William R. Ebenezaraj} under AGV-ACR.AI at IIT Kharagpur.
+
+\chapter{Controls Module}
+\section{MPC with an Integrated Local Planner}
+\subsection{Aim}
+To build an MPC which subscribes to a waypoint generator leading to a global nav goal (global planner) and uses MPC strategies to generate an optimal local path and track it accurately.
+
+\subsection{Environment of Implementation}
+
+The following frameworks/packages were employed:
+\begin{enumerate}
+	\item CARLA 0.9.10.1 running on Ubuntu 20.04
+	\item ROS Bridge for 0.9.10.1
+	\item ROS Noetic
+\end{enumerate}
+
+\section{Model Predictive Control for Lateral Control}
+
+\subsection{Aim}
+To build an MPC which subscribes to a waypoint generator leading to a global nav goal (global planner) and uses MPC to track it accurately.
+
+\subsection{Environment of Implementation}
+
+The following frameworks/packages were employed:
+\begin{enumerate}
+	\item CARLA 0.9.10.1 running on Ubuntu 20.04
+	\item ROS Bridge for 0.9.10.1
+	\item ROS Noetic
+\end{enumerate}
+
+\section{Linear Quadratic Regulator for Lateral Control}
+
+\section{Path Tracking using Pure Pursuit and Stanley}
+\subsection{Aim}
+To build geometric path trackers that control the lateral actuation of the car (steering) to follow a static path.
+
+\subsection{Environment of Implementation}
+
+The following frameworks/packages were employed:
+\begin{enumerate}
+	\item Gazebo9 on Ubuntu 18.04
+	\item car\_demo package by OSRF
+	\item ROS Melodic
+\end{enumerate}
+
+\chapter{Embedded Module}
+\section{STM32 based Motor Drivers}
+
+\section{Importing SLDPRTs into Gazebo}
+
+\section{Power Distribution Board Design}
+\subsection{Aim}
+To design a PDB that can handle 
+
+\subsection{Environment of Implementation}
+
+The following frameworks/packages were employed:
+\begin{enumerate}
+	\item CARLA 0.9.10.1 running on Ubuntu 20.04
+	\item ROS Bridge for 0.9.10.1
+	\item ROS Noetic
+\end{enumerate}
+
+\chapter{Mechanical Module}
+\section{Design of URC Wheels}
+Wheel designed was chosen to be the one to be implemented on the rover, after extensive refinement for weight reduction and analysis on Static Structural.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/wheel2.png}
+\end{figure}
+
+Other wheels designed for the task:
+
+
+\section{Design of URC Chassis}
+The entire URC was designed by me with inputs from my batchmates at AGV. Sofrware used: Solidworks 2018 and PhotoView 360.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/Rover.png}
+\end{figure}
+
+\section{Design of IGVC Chassis}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/chass_igvc1.png}
+\end{figure}
+
+This task was completed in time, collaborating with Saurabh Mishra. A brief extract from the task report has been included below:
+
+\begin{displayquote}
+We propose a chassis with two differentially powered wheels and one free castor wheel. Four motors were noted to offer more traction, but they would consume more power, demanding larger batteries. Omni-wheels were also deliberated upon but were reported to be significantly ineffective for traversal on uneven grass terrain.
+
+The laptop computer controlling the bot will be stationed on the platform, as indicated. The platform is supported by a vertical circular hollow array of colonnades. While beams with a rectangular cross-section are more resilient, the circular cross-section is the best for columns. 
+
+The colonnades will be fixed to the planks using connectors permanently attached to them. This concept avoids the need to use screws in the aft section of the vehicle.
+\end{displayquote}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/chass_igvc2.png}
+\end{figure}
+
+\end{document}
